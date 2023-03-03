@@ -60,27 +60,27 @@ export default function Home(){
     }
 
     return (
-    <div>
-            <Link to = '/create'>Crear Receta</Link>
-            <h1>RECETAS PARA TU BIENESTAR</h1>
-            <button onClick={e => {handleClick(e)}}>
-                Cargar todas las recetas
+    <div className='DivHome'>
+            <h1 id='h1Home'>RECIPES FOR YOUR WELL-BEING</h1>
+            <button className='buttonAll' onClick={e => {handleClick(e)}}>
+            Load all recipes
             </button>
             <SearchBar/>
         <div> 
-            <select onChange={e=>HandlerOrderByName(e)}> 
-                <option value="asc">Nombre Ascendente</option>
-                <option value="desc">Nombre Descendente</option>
+            <select onChange={e=>HandlerOrderByName(e)}>
+                <option>(Select by name)</option> 
+                <option value="asc">Name (A-Z)</option>
+                <option value="desc">Name (Z-A)</option>
             </select>
 
             <select onChange={e=>HandlerOrderByHealth(e)}>
-                <option value="healthScoreAll">All by Health Score</option>
+                <option value="healthScoreAll">(All by Health Score) </option>
                 <option value="healthScoreAsc">Ascending Health Score</option>
                 <option value="healthScoreDesc">Descending Health Score</option>
             </select>
 
             <select onChange={e=>handlerFilteredByDiets(e)}>
-                <option value='All'>All Recipes</option>
+                <option value='All'>(All Recipes)</option>
                 <option value='gluten free'>Gluten free</option>
                 <option value='dairy free"'>Dairy free</option>
                 <option value='ketogenic'>Ketogenic</option>
@@ -94,25 +94,28 @@ export default function Home(){
             </select>
 
             <select onChange={e=>handlerFilteredCreated(e)}>
-                <option value='All'>Todos</option>
+                <option value='All'>(Todos)</option>
                 <option value='Created'>Creados</option>
                 <option value='Api'>Existentes</option>
             </select>
-        <Paginado 
-        RecipesPerPage={RecipesPerPage}
-        allRecipes={allRecipes.length}
-        paginado = {paginado}
-        /> 
+            </div>
             {currentRecipe?.map((el) =>{ //este signo de pregunta es para preguntar si existe primeor y despues lo mapea
             return (
                 <div className= 'cartas'>
-                    <Link to={"/home/"+ el.id}>
+                    <Link to={"/detail/"+ el.id}>
                         <Card name={el.name} image={el.image} tiposDieta={el.tiposDieta}/>
                     </Link>
                 </div>
             )
         })}
 
+        <Paginado 
+        RecipesPerPage={RecipesPerPage}
+        allRecipes={allRecipes.length}
+        paginado = {paginado}
+        /> 
+        <div className='linkHome'>
+        <button id='buttonCreate'><Link to = '/create'>Crear Receta</Link></button>
         </div>
     </div>
     )

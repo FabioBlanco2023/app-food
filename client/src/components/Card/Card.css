@@ -1,5 +1,14 @@
 .container{
-    border: 1px solid white;
-    border-radius: 5px;
-    margin: 10px;
+   display: inline-block;
+   border: #DCB069 15px double;
+   width: 500px;
+   height: 350px;
+   margin: 5px;
+}
+.container img{
+    max-width: 150px;
+}
+
+.container h3{
+   font-size: 20px;
 }

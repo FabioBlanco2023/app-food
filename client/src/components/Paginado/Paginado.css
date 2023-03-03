@@ -1,6 +1,6 @@
 .number{
     width: 30px;
-    height: 30px;
+    height: auto;
     font-family: inherit;
     font-weight: 600;
     font-size: 16px;
@@ -10,14 +10,14 @@
     background: white;
     color: #eee;
     border-color: #eee;
-    padding: 6px;
+    text-align: center;
+
 }
 
 .paginado{
     display:flex;
     justify-content: center;
-    margin-top: 1rem;
-    align-items: center;
+    margin-top: 3rem;
 }
 
 .button{
@@ -25,5 +25,4 @@
     border-color: #101010;
     background: white;
     color: #101010;
-
 }

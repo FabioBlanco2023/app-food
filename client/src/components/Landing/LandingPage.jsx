@@ -7,9 +7,9 @@ export default function LandingPage(){
     return(
         <div className='landing-div'>
             <img className='imagen-1' src={imagen} alt="Primera foto" />
-            <h1>BIENVENIDOS</h1>
+            <h1>WELCOME</h1>
             <Link to = '/home'>
-                <button className='botonLanding'>Ingresar</button>
+                <button className='botonLanding'>Get into</button>
             </Link>
         </div>
     )

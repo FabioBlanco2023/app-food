@@ -1,15 +1,10 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  html, 
+html, 
   body{
     color: white;
-    background-color: #E4D9C7;
+    background-color: #FAF8F5;
     font-family: Lato, sans-serif;
-    margin-top: 40px;
+    margin-top: 2em;
+    text-align: center;
   }
   
   h1{
