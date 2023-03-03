@@ -21,7 +21,7 @@ const getApiInfo = async() => {
 };
 
 const getDBInfo = async() =>{
-   return await Recipe.findAll({
+   const results = await Recipe.findAll({
        include: {
            model: Diets,
            attributes: ['name'],
@@ -30,7 +30,13 @@ const getDBInfo = async() =>{
            }
        }
    })
+   const datBmap = results.map((el)=>({
+       ...el.toJSON(),
+       diets: el.diets.map((e)=>e.name)
+   }))
+   return datBmap;
 }
+
 
 const getAllRecipes = async () => {
    const apiInfo = await getApiInfo(); //la ejecuto () porque sino no me devuelve nada
