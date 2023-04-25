@@ -12,4 +12,4 @@ module.exports = (sequelize) => {
   {timestaps: false}
   );
 };
-//no le pasamos el id porque en este caso porque no vamos a tener otro tipo de datos de ocupacion salvo lo que tenemos en db entonces me lo va a generar solito. Con el ID de numero me alcanza. 
+//no le pasamos el id porque en este caso no vamos a tener otro tipo de datos de ocupacion salvo lo que tenemos en db entonces me lo va a generar solo. Con el ID de numero es suficiente. 

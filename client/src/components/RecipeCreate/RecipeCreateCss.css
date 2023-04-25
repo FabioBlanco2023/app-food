@@ -1,104 +1,113 @@
 .bodyCreate {
-   
-    background-size: 100rem;
-    color: #2F323A;
-    font-family: Roboto, sans-serif;
-    font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+  margin-left: 1050px;
+}
+.imageForm{
+  position: absolute;
+  width: 800px;
+  height: 800px;
+  left: 10%;
+  top: 16%;
+}
+.h1Form {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
 
-  }
-  
+.formName,
+.formImage,
+.formSummary,
+.formSteps,
+.formDiets {
+  margin-bottom: 10px;
+}
 
-  .h1Letra{
-    color: #0a0a23;
-  }
+.formName label,
+.formImage label,
+.formSummary label,
+.formSteps label,
+.formDiets label {
+  display: block;
+  font-weight: bold;
+}
 
+.formName input,
+.formImage input,
+.formSummary textarea,
+.formSummary input,
+.formSteps textarea,
+.formDiets select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 5px;
+}
 
-  form {
-    
-    width: 60vw;
-    max-width: 600px;
-    min-width: 300px;
-    margin: 0 auto;
-    padding-bottom: 2em;
-    background-color: #EAE7E5;
-    border-radius: 10px;
+.formDiets select {
+  height: 32px;
+}
 
-  }
+.formName input:focus,
+.formImage input:focus,
+.formSummary textarea:focus,
+.formSummary input:focus,
+.formSteps textarea:focus,
+.formDiets select:focus {
+  outline: none;
+  border-color: #FFEFD8;
+}
 
-  .formName,
-  .formImage,
-  .formSummary,
-  .formSummary,
-  .formSteps
-  {
-    display: flex;
-    border: none;
-    padding: 2rem 0;
-    padding-left: 18%;
-    border-bottom: 6px solid #FAF8F5;
-    align-items: center;
-  }
-  .formDiets{
-      display: flex;
-      border: none;
-      padding: 2rem 0;
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 2px;
+  width: 200px;
+}
 
-      padding-left: 18%;
-  }
+.formDiets select option {
+  color: #333;
+}
 
-  input, textarea {
-    background-color: white;
-    border: 1px solid #0a0a23;
-    color: #0a0a23;
-    border-radius: 6px;
-  }
-  .divDiet{
-display: flex;
-margin:3px;
-padding:5px;
-align-items: center;
-justify-content: center;
-  }
+.buttonForm,
+.butonReturn {
+  background-color: #FCB900;
+  color: black;
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
 
-  .botonX{
-    margin: 4px; 
-    
-  }
-  
-  .buttonForm {
-    display: block;
-    min-width: 130px;
-    margin: 1em auto;
-    height: 2em;
-    font-size: 1.1rem;
-    background-color: white;
-    border-color: #DCB069;
-    cursor: pointer;
-    color: #0a0a23;
-    border-radius: 6px
-  }
+.buttonForm:hover,
+.butonReturn:hover {
+  background-color: #FCB900;
+}
 
-  label {
-    display: flex;
-    margin-right: 3%;
-  }
+.return {
+  margin-top: 10px;
+  margin-left: -156px;
+}
+.divDiet {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
 
-  .return{
-    display: flex;
-    justify-content: center;
-    margin-top: 1.5em;
-  }
+.divDiet p {
+  margin-right: 8px;
+}
 
-  .butonReturn{
-    min-width: 130px;
-    height: 2em;
-    font-size: 1.1rem;
-    background-color: white;
-    border-color: #DCB069;
-    color: #0a0a23;
-    border-radius: 6px;
-    cursor: pointer;
-  }
-  
-
-  
+.botonX {
+  margin-bottom: 7px;
+  padding: 4px;
+  background-color: #f00; /* Cambia el color de fondo del botón según tus necesidades */
+  color: #fff; /* Cambia el color del texto del botón según tus necesidades */
+  border: none;
+  cursor: pointer;
+}

@@ -1,62 +1,73 @@
-
-.Detail{
-    margin: 0 auto;
-    color: #0a0a23;
-    max-width: 800px;
-    min-width: 400px;
-    background-color: #EAE7E5;
-    border-radius: 10px;
-    font-family: 'Times New Roman';
-
+.recipeDetail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
 }
 
-p, #h5,#h3 {
-  font-size: 18px;
-  line-height: 1.5;
-  margin: 20px;
-  text-align: justify;
-  font-weight: normal;
-  font-family: 'Times New Roman';
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+  font-size: 24px; /* Ajusta el tamaño de fuente según tus necesidades */
+  /* Agrega otros estilos de diseño que desees para el mensaje de carga */
 }
 
-#h2{
-    font-size: 25px;
-  line-height: 1.5;
-  text-align: center;
-  font-weight: normal;
-  font-family: 'Times New Roman';
+.imageContainer {
+  flex: 1;
+  background-color: #DF9A57; /* Color de fondo para el recuadro de la imagen */
+  padding: 16px; /* Espaciado interno del recuadro de la imagen */
+  max-width: 350px;
+  height: 550px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px 0 0 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+.textContainer {
+  position: relative; /* Agregar posición relativa para que el pseudo-elemento sea relativo a este div */
+  background-color: #F3DFCB; /* Color de fondo para el recuadro del texto */
+  padding: 16px; /* Espaciado interno del recuadro del texto */
+  max-width: 700px;
+  height: auto;
+  border-radius: 0 10px 10px 0px ;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
-#h1{
-        font-size: 36px;
-        padding-top: 25px;
-        color: #0a0a23;
-    }
-
-.divimage{
-        display: flex;
-        justify-content: center;
-        margin: 20px; 
-        max-width: 100%;
-        height: auto;
-        border-radius: 15px;
-    }
 
 #image {
-  margin-bottom: 20px; 
-        max-width: 100%;
-        height: auto;
-        border-radius: 15px;
+  max-width: 100%; /* Asegura que la imagen se ajuste al tamaño del contenedor */
 }
 
-.buttonGoBack{
-  display: block;
-    min-width: 130px;
-    margin: 1em auto;
-    height: 2em;
-    font-size: 1.1rem;
-    background-color: white;
-    border-color: #DCB069;
-    cursor: pointer;
-    color: #0a0a23;
+/* Estilos adicionales para los elementos de texto, ajusta según tus necesidades */
+#h1 {
+  font-size: 25px;
+  font-family: Arial, sans-serif;
+  margin-bottom: 10px;
+  text-align: center;
+}
+#h2,
+#h3,
+p,
+#h5 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-family: Arial, sans-serif; /* Cambia Arial por el tipo de letra que deseas utilizar */
+  font-size: 16px;
+  font-weight: normal;
+  text-align: justify;
+}
+
+.buttonGoBack {
+  display: inline-block;
+  margin-left: 1050px;
+  margin-top: -35px;
+  background-color: #DF9A57;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
 }

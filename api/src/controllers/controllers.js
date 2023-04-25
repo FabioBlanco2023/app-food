@@ -13,7 +13,8 @@ const getApiInfo = async() => {
            resumenPlato: el.summary,
            healthScore: el.healthScore,
            diets: el.diets,
-           steps: (el.analyzedInstructions[0] && el.analyzedInstructions[0].steps ? el.analyzedInstructions[0].steps.map(e => e.step).join("|") : 'No hay pasos')
+           sourceUrl: el.sourceUrl,
+           steps: (el.analyzedInstructions[0] && el.analyzedInstructions[0].steps ? el.analyzedInstructions[0].steps.map(e => e.step).join(" ") : 'No hay pasos')
        };
 
    });

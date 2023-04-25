@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import {Link, useHistory} from 'react-router-dom';
 import {useDispatch, useSelector} from 'react-redux';
 import {getDiets, postRecipes} from '../../redux/actions/index'
+import imageform from '../../imagenes/imagenform2.png'
 import '../RecipeCreate/RecipeCreateCss.css'
 
 
@@ -13,8 +14,8 @@ function validate(input){
         errors.image = 'Image is required'}
     if(!input.resumenPlato){
         errors.resumenPlato = 'Summary is required'}
-    if(input.healthScore<=1 || input.healthScore>100){
-        errors.healthScore = 'Health Score is required, must be a number between 0-100'}
+    if(input.healthScore<=0 || input.healthScore>100){
+        errors.healthScore = 'Health Score is required, must be a number between 1-100'}
     if(!input.pasos){
         errors.pasos = 'Steps is required'} 
     if(input.diets.length===0){
@@ -85,57 +86,57 @@ useEffect(() =>{
 
 return(
     <div className="bodyCreate">
-        <div  className="h1Form">
-        <h1 className="h1Letra">CREATE YOUR RECIPE</h1>
-        </div>
+        <img className="imageForm" src={imageform} alt="imgForm" />
+        <div  className="h1Form">Crea tu receta</div>
         <form onSubmit={(e)=>handleSubmit(e)}>
+            <div className="detail">
             <div className="formName">
                 <label>Name: </label>
-                <input type='text' value={input.name} name='name' onChange={e=>handleChange(e)} />
+                <input type='text' value={input.name} name='name' placeholder="Name" onChange={e=>handleChange(e)} />
                 {errors.name && (<p className="error">{errors.name}</p>)}
             </div>
             <div className="formImage">
-                <label>Image link: </label>
+                <label>Image Link: </label>
                 <input type='text' value={input.image} name='image' onChange={e=>handleChange(e)} placeholder="URL" />
                 {errors.image && (<p className="error">{errors.image}</p>)}
             </div>
             <div className="formSummary">
                 <label>Summary of the dish: </label>
-                <textarea value={input.resumenPlato} name='resumenPlato' onChange={e=>handleChange(e)} rows="3" cols="30"/>
+                <textarea value={input.resumenPlato} name='resumenPlato' onChange={e=>handleChange(e)} rows="2" cols="10"/>
                 {errors.resumenPlato && (<p className="error">{errors.resumenPlato}</p>)}
             </div>
             <div className="formSummary">
-                <label>Health Score: </label>
+                <label>Health score: </label>
                 <input type='number' value={input.healthScore} name='healthScore' onChange={e=>handleChange(e)} />
                 {errors.healthScore && (<p className="error">{errors.healthScore}</p>)}
             </div>
             <div className="formSteps">
                 <label>Steps: </label>
                 <textarea value={input.pasos} name='pasos'
-                rows="5" cols="30" placeholder="To make this recipe it is necessary to follow the following steps:"
+                rows="2" cols="10" placeholder="To make this recipe it is necessary to follow the following steps:"
                 onChange={e=>handleChange(e)}/>
                 {errors.pasos && (<p className="error">{errors.pasos}</p>)}
             </div>
             <div className="formDiets">
-                <label>Select one or more type of diet: </label>
+                <label>Select one or more types of diet: </label>
             <select onChange={(e)=>handleSelect(e)}>
-            <option value="">(Select one)</option>
+            <option disabled value="">(Select one)</option>
                 {diets.map((diet)=>(
-                    <option value={diet.name}>{diet.name}</option>
+                    <option value={diet.name}>{diet.name[0].toUpperCase()+diet.name.substring(1)}</option>
                 ))}
             </select>{errors.diets && (<p className="error">{errors.diets}</p>)}
             </div>
             {input.diets.map(el=> 
                         <div className="divDiet">
-                            <p>{el}</p>
+                            <p>{el[0].toUpperCase()+el.substring(1)}</p>
                             <button type="button" className="botonX" onClick={()=> handleDelete(el)}>x</button>
                         </div>
 
                         )}
             
 
-            <button className="buttonForm">Create Recipe</button>
-
+            <button className="buttonForm">Create your recipe</button>
+            </div>
         </form>
         <div className="return">
         <Link to='/home'><button className="butonReturn">Go back</button></Link>

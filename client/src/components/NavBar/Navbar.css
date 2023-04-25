@@ -1,0 +1,108 @@
+header {
+  background-color: none;
+  padding: 50px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 30px;
+  padding-left: 110px;
+}
+
+.rectangulo{
+  width: 1705px;
+height: 83px;
+left: 157px;
+top: 55px;
+padding: 25px;
+border-radius: 25px;
+background-color: #FDF0D1;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  /* Alinear contenido en el lado derecho */
+}
+ul nav  {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  /* Permitir envoltura de elementos en varias filas */
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  color: #333;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: #666;
+}
+
+/* Estilo para el enlace activo en la barra de navegación */
+nav ul li.active a {
+  color: #666;
+  font-weight: bold;
+}
+
+
+
+.Nav-about-button :link {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #363636;
+}
+.LandingH1{
+   
+  position: absolute;
+  width: 187px;
+  height: 110px;
+  left: 204px;
+  top: 35px;
+  
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 61px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  
+  color: #FCB900;
+  
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+/* Estilos para pantallas pequeñas (hasta 768px) */
+@media (max-width: 768px) {
+  header {
+    padding: 10px; /* Reducir padding en pantallas pequeñas */
+  }
+  
+  nav {
+    justify-content: center; /* Centrar elementos en pantallas pequeñas */
+  }
+
+  nav ul li {
+    margin-right: 5px; /* Espaciado más estrecho en pantallas pequeñas */
+  }
+
+  .Nav-about-button {
+    display: none; /* Ocultar botón en pantallas pequeñas */
+  }
+}
+

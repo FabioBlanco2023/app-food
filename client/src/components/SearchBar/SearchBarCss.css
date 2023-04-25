@@ -1,24 +1,27 @@
 #inputSearch{
-    display:inline-block;
-    min-width: 80px;
-    margin: 5px;
-    height: 30px;
-    font-size: 1.1rem;
-    background-color: white;
-    border-color: hsl(37, 62%, 64%);
+    position: relative;
+    appearance: none;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 20px; /* Ajusta el valor para hacer que los selectores sean más o menos ovalados */
+    padding: 10px;
+    width: 200px; /* Ajusta el valor para establecer el ancho del selector */
+    font-size: 16px; /* Ajusta el valor para establecer el tamaño de fuente del selector */
+    color: #333; /* Ajusta el valor para establecer el color del texto del selector */
     cursor: pointer;
-    color: #0a0a23;
-    border-radius: 15px;
+    margin-left: 1550px;
+    margin-top: 25px;
 }
 
 .SeachButton{
-    min-width: 80px;
-    margin: 1em auto;
-    height: 30px;
-    font-size: 1.1rem;
-    background-color: white;
-    border-color: #DCB069;
+    position: relative;
+    appearance: none;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 20px; /* Ajusta el valor para hacer que los selectores sean más o menos ovalados */
+    padding: 10px;
+    width: 50px; /* Ajusta el valor para establecer el ancho del selector */
+    font-size: 16px; /* Ajusta el valor para establecer el tamaño de fuente del selector */
+    color: #333; /* Ajusta el valor para establecer el color del texto del selector */
     cursor: pointer;
-    color: #0a0a23;
-    border-radius: 15px;
 }

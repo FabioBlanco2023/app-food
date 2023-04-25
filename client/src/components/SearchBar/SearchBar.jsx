@@ -3,7 +3,7 @@ import {useState} from 'react';
 import { useDispatch } from "react-redux";
 import { getNameRecipes } from "../../redux/actions/index";
 import '../SearchBar/SearchBarCss.css'
-
+import { AiOutlineSearch } from 'react-icons/ai';
 
 
 export default function SearchBar () {
@@ -29,7 +29,7 @@ export default function SearchBar () {
 
             <button className="SeachButton"
             type="submit" 
-            onClick={(e)=>handleSubmit(e)}>Search</button>
+            onClick={(e)=>handleSubmit(e)}> <AiOutlineSearch/> </button>
         </div>
     )
 

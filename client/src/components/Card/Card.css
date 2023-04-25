@@ -1,14 +1,57 @@
-.container{
-   display: inline-block;
-   border: #DCB069 15px double;
-   width: 500px;
-   height: 350px;
-   margin: 5px;
-}
-.container img{
-    max-width: 300px;
+.container {
+   width: 100%;
+   max-width: 1200px;
+   height: 430px;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   margin: auto;
 }
 
-.container h3{
-   font-size: 20px;
+.container > .card { /* Cambio aquí */
+   width: 330px;
+   height: 400px;
+   border-radius: 10px;
+   box-shadow: 0 2px rgba(0, 0, 0, 0.919);
+   overflow: hidden;
+   margin: 20px;
+   text-align: center;
+   text-decoration-line: none;
+   transition: all 0.25s;
+}
+
+.container > .card:hover { /* Cambio aquí */
+   transform: translateY(-15px);
+   box-shadow: 0 12px 16px rgba(0, 0, 0, 0.892);
+}
+
+.h3card{
+   text-align: center;
+   font-size: 20px; 
+   color: #0a0a23;
+   font-weight: 100;
+   margin-left: 20px;
+   margin-right: 20px;
+   margin-top: 20px;
+   text-decoration-line: none;
+   /* Remover subrayado */
+   text-decoration: none !important;
+}
+
+.h5card.custom-h5 { /* Utiliza la clase custom-h5 para aplicar el estilo específico */
+   text-transform: capitalize;
+   color: #0a0a23;
+   margin-left: 20px;
+   margin-right: 20px;
+   margin-top: 5px;
+  text-decoration: none !important;
+}
+
+.card{
+   background-color: #FCF9FA;
+}
+
+.imagecard{
+   margin-top: 7px;
+   border-radius: 7px;
 }

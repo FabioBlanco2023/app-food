@@ -1,22 +1,9 @@
-html, 
-  body{
-    color: white;
-    background-color: #FAF8F5;
-    font-family: Lato, sans-serif;
-    margin-top: 2em;
-    text-align: center;
-  }
-  
-  h1{
-    color: #FFFFFF;
-    font-size: 40px;
-    font-family: Roboto, sans-serif;
-    text-align: center;
-    margin: 20px 0px;
-  }
-  
-
- 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
   /**/
   
  
