@@ -7,18 +7,18 @@ import "../Detail/DetailCss.css"
 
 export default function Detail(props){
   const dispatch = useDispatch()
-  const [loaded, setLoaded] = useState(false); // Agrega el estado para controlar si los datos se han cargado completamente
+  const [loaded, setLoaded] = useState(false); 
 
   useEffect(()=>{
       dispatch(getDetail(props.match.params.id))
-      .then(() => setLoaded(true)); // Cambia el estado a verdadero una vez que los datos se hayan cargado completamente
+      .then(() => setLoaded(true)); 
   }, [dispatch]);
 
   const myRecipe = useSelector ((state)=>state.detail);
 
   return (
       <div>
-        {loaded ? ( // Utiliza el estado para condicionar la renderización de la carta
+        {loaded ? ( 
           <div className="recipeDetail">
             <div className="imageContainer">
               <img id="image" src={myRecipe.image} alt="Photo" />

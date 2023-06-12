@@ -2,20 +2,23 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 500px;
-  margin-left: 1050px;
+  width: 400px;
+  margin-left: 650px;
+  background-color: #333333;
 }
-.imageForm{
+.imageForm {
   position: absolute;
-  width: 800px;
-  height: 800px;
-  left: 10%;
-  top: 16%;
+  width: 400px;
+  height: 400px;
+  left: 17%;
+  top: 30%;
+  border-radius: 50%;
 }
 .h1Form {
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 20px;
+  color: white;
 }
 
 .formName,
@@ -33,6 +36,7 @@
 .formDiets label {
   display: block;
   font-weight: bold;
+  color: white;
 }
 
 .formName input,
@@ -43,7 +47,7 @@
 .formDiets select {
   width: 100%;
   padding: 8px;
-  border: 1px solid #ccc;
+  border: 1px solid #1affff;
   border-radius: 4px;
   margin-top: 5px;
 }
@@ -59,7 +63,7 @@
 .formSteps textarea:focus,
 .formDiets select:focus {
   outline: none;
-  border-color: #FFEFD8;
+  border-color: #1affff;
 }
 
 .error {
@@ -75,18 +79,20 @@
 
 .buttonForm,
 .butonReturn {
-  background-color: #FCB900;
+  background-color: #1affff;
   color: black;
   border: none;
   outline: none;
   padding: 10px 20px;
   border-radius: 4px;
   cursor: pointer;
+  font-weight: bold;
+  font-weight: 800;
 }
 
 .buttonForm:hover,
 .butonReturn:hover {
-  background-color: #FCB900;
+  background-color: #e91db6;
 }
 
 .return {
@@ -106,8 +112,8 @@
 .botonX {
   margin-bottom: 7px;
   padding: 4px;
-  background-color: #f00; /* Cambia el color de fondo del botón según tus necesidades */
-  color: #fff; /* Cambia el color del texto del botón según tus necesidades */
+  background-color: #e91db6; 
+  color: black; 
   border: none;
   cursor: pointer;
 }

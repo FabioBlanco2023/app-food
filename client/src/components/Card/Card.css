@@ -8,7 +8,7 @@
    margin: auto;
 }
 
-.container > .card { /* Cambio aquí */
+.container > .card { 
    width: 330px;
    height: 400px;
    border-radius: 10px;
@@ -20,35 +20,34 @@
    transition: all 0.25s;
 }
 
-.container > .card:hover { /* Cambio aquí */
+.container > .card:hover { 
    transform: translateY(-15px);
    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.892);
 }
 
 .h3card{
+   text-decoration-line: none;
    text-align: center;
    font-size: 20px; 
    color: #0a0a23;
-   font-weight: 100;
+   font-weight: 900;
    margin-left: 20px;
    margin-right: 20px;
    margin-top: 20px;
-   text-decoration-line: none;
-   /* Remover subrayado */
-   text-decoration: none !important;
 }
 
-.h5card.custom-h5 { /* Utiliza la clase custom-h5 para aplicar el estilo específico */
+.h5card.custom-h5 { 
+   text-decoration-line: none;
    text-transform: capitalize;
    color: #0a0a23;
    margin-left: 20px;
    margin-right: 20px;
    margin-top: 5px;
-  text-decoration: none !important;
+   font-weight: 700;
 }
 
 .card{
-   background-color: #FCF9FA;
+   background-color: #cddee6;
 }
 
 .imagecard{

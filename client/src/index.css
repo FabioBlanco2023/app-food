@@ -5,12 +5,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-background-image: url(./imagenes/fondo.jpeg);
+  background-image: url(./imagenes/imagen\ fondo\ food\ \(2\).jpg);
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position:  center center;
   background-attachment: fixed;
   background-size: cover; 
- 
 }
 
 code {

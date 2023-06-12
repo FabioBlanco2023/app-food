@@ -26,7 +26,7 @@ function validate(input){
 
 export default function RecipeCreate(){
     const dispatch = useDispatch()
-    const history = useHistory() //cosito del route que me lleva a donde yo le diga
+    const history = useHistory() 
     const diets = useSelector((state) => state.diets)
     
     const [input, setInput] = useState({
@@ -131,11 +131,10 @@ return(
                             <p>{el[0].toUpperCase()+el.substring(1)}</p>
                             <button type="button" className="botonX" onClick={()=> handleDelete(el)}>x</button>
                         </div>
-
                         )}
             
 
-            <button className="buttonForm">Create your recipe</button>
+            <button className="buttonForm">Create your recipe1</button>
             </div>
         </form>
         <div className="return">

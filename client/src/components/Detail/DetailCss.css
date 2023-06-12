@@ -10,14 +10,14 @@
   justify-content: center;
   align-items: center;
   height: 75vh;
-  font-size: 24px; /* Ajusta el tamaño de fuente según tus necesidades */
-  /* Agrega otros estilos de diseño que desees para el mensaje de carga */
+  font-size: 24px;
+
 }
 
 .imageContainer {
   flex: 1;
-  background-color: #DF9A57; /* Color de fondo para el recuadro de la imagen */
-  padding: 16px; /* Espaciado interno del recuadro de la imagen */
+  background-color: #DB9D47;
+  padding: 16px;
   max-width: 350px;
   height: 550px;
   display: flex;
@@ -27,9 +27,9 @@
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 .textContainer {
-  position: relative; /* Agregar posición relativa para que el pseudo-elemento sea relativo a este div */
-  background-color: #F3DFCB; /* Color de fondo para el recuadro del texto */
-  padding: 16px; /* Espaciado interno del recuadro del texto */
+  position: relative;
+  background-color: #cddee6;
+  padding: 16px;
   max-width: 700px;
   height: auto;
   border-radius: 0 10px 10px 0px ;
@@ -38,10 +38,9 @@
 
 
 #image {
-  max-width: 100%; /* Asegura que la imagen se ajuste al tamaño del contenedor */
+  max-width: 100%
 }
 
-/* Estilos adicionales para los elementos de texto, ajusta según tus necesidades */
 #h1 {
   font-size: 25px;
   font-family: Arial, sans-serif;
@@ -54,7 +53,7 @@ p,
 #h5 {
   margin-top: 0;
   margin-bottom: 10px;
-  font-family: Arial, sans-serif; /* Cambia Arial por el tipo de letra que deseas utilizar */
+  font-family: Arial, sans-serif;
   font-size: 16px;
   font-weight: normal;
   text-align: justify;
@@ -63,11 +62,12 @@ p,
 .buttonGoBack {
   display: inline-block;
   margin-left: 1050px;
-  margin-top: -35px;
+  margin-top: 15px;
   background-color: #DF9A57;
-  color: #fff;
+  color: #cddee6;
   padding: 10px 20px;
   border-radius: 5px;
   text-decoration: none;
   cursor: pointer;
+  font-size: 16px;
 }

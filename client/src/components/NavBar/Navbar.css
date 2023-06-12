@@ -1,6 +1,6 @@
 header {
   background-color: none;
-  padding: 50px;
+  padding: 20px;
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
@@ -9,32 +9,29 @@ header {
   padding-left: 110px;
 }
 
-.rectangulo{
-  width: 1705px;
-height: 83px;
-left: 157px;
-top: 55px;
-padding: 25px;
-border-radius: 25px;
-background-color: #FDF0D1;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);;
+.rectangulo {
+  width: 1193.5px; 
+  height: 87px;
+  padding: 25px;
+  border-radius: 25px;
+  background-color: #1affff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 nav {
   display: flex;
-  justify-content: flex-end;
-  /* Alinear contenido en el lado derecho */
+
+ 
 }
 ul nav  {
   list-style-type: none;
-  display: flex;
-  flex-wrap: wrap;
-  /* Permitir envoltura de elementos en varias filas */
+
 }
 
 nav ul li {
-  display: inline;
+  display: inline-block;
   margin-right: 10px;
+  padding-left: 110px;
 }
 
 nav ul li a {
@@ -46,7 +43,7 @@ nav ul li a:hover {
   color: #666;
 }
 
-/* Estilo para el enlace activo en la barra de navegación */
+
 nav ul li.active a {
   color: #666;
   font-weight: bold;
@@ -57,52 +54,66 @@ nav ul li.active a {
 .Nav-about-button :link {
   font-family: 'Inter';
   font-style: normal;
+  top: 200px;
+  right: -200px;
   font-weight: 400;
   font-size: 25px;
   line-height: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
   color: #363636;
 }
+
+@keyframes typing-animation {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 115%;
+  }
+}
+
 .LandingH1{
    
-  position: absolute;
-  width: 187px;
-  height: 110px;
-  left: 204px;
-  top: 35px;
+  position: relative;
+  width: 285px;
+  height: 200px;
+  left: 90px;
+  top: -18px;
   
-  font-family: 'Inter';
+  font-family: 'Monaco', monospace; 
   font-style: normal;
   font-weight: 400;
-  font-size: 50px;
-  line-height: 61px;
-  display: flex;
+  font-size: 60px;
+  line-height: 71px;
+  display: inline;
   align-items: center;
   text-align: center;
   
-  color: #FCB900;
+  color: hwb(0 0% 100%);
   
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  white-space: nowrap; 
+  overflow: hidden; 
   }
-/* Estilos para pantallas pequeñas (hasta 768px) */
+
+  .LandingH1::after {
+  content: "";
+  border-left: 4px solid black;
+  background: #1affff;
+  right: 0;
+  height: 100%;
+  position: absolute;
+  animation: typing-animation 4s infinite alternate steps(9);
+  }
+
+
 @media (max-width: 768px) {
   header {
-    padding: 10px; /* Reducir padding en pantallas pequeñas */
-  }
-  
-  nav {
-    justify-content: center; /* Centrar elementos en pantallas pequeñas */
+    padding: 10px; 
   }
 
-  nav ul li {
-    margin-right: 5px; /* Espaciado más estrecho en pantallas pequeñas */
-  }
 
   .Nav-about-button {
-    display: none; /* Ocultar botón en pantallas pequeñas */
+    display: none; 
   }
 }
 

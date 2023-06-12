@@ -12,7 +12,7 @@ export function getRecipes(){
     } 
 }
 
-export function filterRecipesByDiets(payload){ //payload es el value que me va a llegar
+export function filterRecipesByDiets(payload){ 
     return {
         type: 'FILTER_BY_DIETS',
         payload
@@ -85,4 +85,3 @@ export function getDetail (id){
         }
     }
 }
-//el redux thunk me sirve para trabajar con las llamadas asincronas que hago aca

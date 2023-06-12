@@ -11,39 +11,38 @@ import {IoMdArrowDropdown} from 'react-icons/io';
 
 export default function Home(){
     const dispatch = useDispatch()
-    const allRecipes = useSelector ((state) => state.recipes) //con esta constante traeme todos los que esta en el estado de las recetas. El useSelector es lo mismo que hacer el mapStatetoProps
-    const [currentPage, setCurrentPage] = useState(1) //useState es para estados locales, empieza en 1 porque siempre voy arrancar en 1 mis paginas
-    const [RecipesPerPage, setRecipePerPage] = useState(9) //cuantos personajes quiero yo por pagina. 
+    const allRecipes = useSelector ((state) => state.recipes) 
+    const [currentPage, setCurrentPage] = useState(1) 
+    const [RecipesPerPage] = useState(9) 
     
-    const [orden, setOrden] = useState('')
+    const [setOrden] = useState('')
 
-    const indexOfLastRecipe = currentPage * RecipesPerPage //en un principio sera 6
+    const indexOfLastRecipe = currentPage * RecipesPerPage 
     const indexOfFirstRecipe = indexOfLastRecipe - RecipesPerPage
-    const currentRecipe = allRecipes.slice(indexOfFirstRecipe, indexOfLastRecipe) //te divide un array dependiendo lo que este pasando por parametro
-
-    const paginado = (pageNumber) =>{ //me ayuda al renderizado
+    const currentRecipe = allRecipes.slice(indexOfFirstRecipe, indexOfLastRecipe) 
+    const paginado = (pageNumber) =>{ 
         setCurrentPage(pageNumber)
     }
 
     useEffect(()=>{
-        dispatch(getRecipes()) //este dispatch es lo mismo que hacer el mapDispatchToProps. 
-    }, [dispatch]) //el array es para que no se llame la funcion de forma infinita. 
+        dispatch(getRecipes())  
+    }, [dispatch])  
 
 
-    function handleClick(e){ //para resetear las recetas
-        e.preventDefault(); //para que no se rompa
+    function handleClick(e){ 
+        e.preventDefault(); 
         dispatch(getRecipes());
     }
 
     function handlerFilteredByDiets(e){
         e.preventDefault();
-        dispatch(filterRecipesByDiets(e.target.value)) //tomara lo que clickea el usuario
+        dispatch(filterRecipesByDiets(e.target.value)) 
         setCurrentPage(1);
     }
 
     function handlerFilteredCreated(e){
         e.preventDefault();
-        dispatch(filterCreated(e.target.value)) //recordar esto es el payload lo del select
+        dispatch(filterCreated(e.target.value)) 
     }
 
     function HandlerOrderByName(e){
@@ -117,7 +116,7 @@ export default function Home(){
 </span>
 
 </div>
-            {currentRecipe?.map((el) =>{ //este signo de pregunta es para preguntar si existe primeor y despues lo mapea
+            {currentRecipe?.map((el) =>{ 
             return (
                 <div className= 'cartas'>
                     <Link to={"/detail/"+ el.id}>

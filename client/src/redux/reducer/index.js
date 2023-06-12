@@ -11,7 +11,7 @@ function rootReducer (state = initialState, action){
         case 'GET_RECIPES':
             return {
                 ...state,
-                recipes: action.payload, //en mi recipes que es un arreglo vacio, mandame toda la accion que recibas del "GET RECIPES"
+                recipes: action.payload, 
                 allRecipes: action.payload
             }
 

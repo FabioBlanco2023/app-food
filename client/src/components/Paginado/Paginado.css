@@ -1,8 +1,8 @@
 .paginadocss {
-    position: relative; /* Agregar esta línea para tener una posición fija */
-    bottom: 0; /* Agregar esta línea para posicionar en la parte inferior */
-    left: -25px; /* Agregar esta línea para posicionar en la parte izquierda */
-    transform: translateX(-32%); /* Agregar esta línea para centrar horizontalmente */
+    position: relative; 
+    bottom: 0; 
+    left: -25px; 
+    transform: translateX(-32%); 
     margin-top: 1rem;
     margin-bottom: 1rem;
     padding: 0;
@@ -10,14 +10,14 @@
   }
   
   .paginado {
+    padding-left: 55%;
     display: flex;
     justify-content: center;
     margin-top: 3rem;
   }
   
   .number {
-    width: 40px;
-    height: 40px;
+    height: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,10 +26,10 @@
     margin: 0 5px;
     border-radius: 50%;
     cursor: pointer;
-    background: #FDF0D1;
     color: #333;
     border: none;
     outline: none;
+    padding: 0;
   }
   
   .number:hover {
@@ -38,7 +38,7 @@
   
   .button {
     font-family: inherit;
-    font-size: 16px;
+    font-size: 30px;
     font-weight: bold;
     display: flex;
     justify-content: center;
@@ -48,14 +48,15 @@
     margin: 0 5px;
     border-radius: 50%;
     cursor: pointer;
-    background: #FDF0D1;
-    color: #333;
+    background: #1affff;
+    color: black;
     border: none;
     outline: none;
   }
   
   .button:hover {
-    background: #ddd;
+    background: #e91db6;
+    font-weight: bold;
   }
   
   .button.disabled {

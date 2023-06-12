@@ -5,7 +5,7 @@ const {API_KEY} = process.env;
 const getApiInfo = async() => {
    const apiUrl = await axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY}&addRecipeInformation=true&number=100`);
    
-   const apiInfo = await apiUrl.data.results.map(el =>{ //el .data es porque axios debe acceder a data que es lo que quiere, es si o si.
+   const apiInfo = await apiUrl.data.results.map(el =>{ 
        return {
            id: el.id,
            name: el.title,
@@ -40,7 +40,7 @@ const getDBInfo = async() =>{
 
 
 const getAllRecipes = async () => {
-   const apiInfo = await getApiInfo(); //la ejecuto () porque sino no me devuelve nada
+   const apiInfo = await getApiInfo(); 
    const dbInfo = await getDBInfo(); 
    const infoTotal = apiInfo.concat(dbInfo);
    return infoTotal;
@@ -48,9 +48,9 @@ const getAllRecipes = async () => {
 
 const getAllDiets = async () => {
     try {
-       //si estan en la db, no hago nada
+       
         const allDiets = await Diets.findAll();
-        if (allDiets.length) {//existen?
+        if (allDiets.length) {
             return allDiets
         }
 

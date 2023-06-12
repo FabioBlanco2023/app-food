@@ -1,4 +1,5 @@
 
+
 .imagen-3{
     position: absolute;
     left: 60.82%;
@@ -7,54 +8,25 @@
     bottom: 0.09%;
     width: 500px;
 }
-.imagen-10{
+.imagen-1{
     position: absolute;
-width: 800px;
-height: 540px;
-left: 48.82%;
+width: 500px;
+height: 350px;
+left: 58.82%;
 right: 0%;
-top: 20.61%;
-}
-
-.imagen-6{
-    position: absolute;
-left: 33.85%;
-right: 56.08%;
-top: 92.22%;
-bottom: 1.81%;
-}
-
-.imagen-7{
-position: absolute;
-left: 45.36%;
-right: 48.18%;
-top: 92.22%;
-bottom: 1.71%;
-}
-
-.imagen-8{
-    position: absolute;
-    left: 51.61%;
-    right: 41.17%;
-    top: 92.22%;
-    bottom: 1.81%;
-}
-
-.imagen-9{
-position: absolute;
-left: 58.85%;
-right: 37.19%;
-top: 92.22%;
-bottom: 1.71%;
+top: 30%;
 }
 
 .LandingH2{
-    position: absolute;
-width: 500px;
+position: absolute;
+width: 827px;
 height: 96px;
-left: 400px;
-top: 270px;
+left: 150px;
+top: 220px;
 
+
+background-color: #DB9D47;
+-webkit-text-stroke: 2px black;
 font-family: 'Inter';
 font-style: normal;
 font-weight: 700;
@@ -63,15 +35,15 @@ line-height: 80px;
 display: flex;
 align-items: center;
 
-color: #000000;
+color: black;
 }
 
 .LandingH3{
 position: absolute;
-width: 500px;
+width: 1115px;
 height: 96px;
-left: 400px;
-top: 520px;
+left: 150px;
+top: 570px;
 
 font-family: 'Inter';
 font-style: normal;
@@ -81,28 +53,52 @@ line-height: 80px;
 display: flex;
 align-items: center;
 
-color: #DB9D47;
+color: #e91db6;
 }
 
-.botonLanding{
-position: absolute;
-width: 163px;
-height: 44px;
-left: 850px;
-top: 650px;
-background: #FCB900;
-border-radius: 10px;
-cursor: pointer;
-font-family: 'Inter';
-font-style: normal;
-font-weight: 400;
-font-size: 25px;
-line-height: 30px;
-display: flex;
-justify-content: center;
-align-items: center;
-text-align: center;
+.botonLanding {
+    position: absolute;
+    width: 120px;
+    height: 40px;
+    left: 200px;
+    top: 433px;
+    background-color: #1affff; 
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    overflow: hidden;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #363636;
+  }
+  
+  .botonLanding:before,
+  .botonLanding:after {
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: #DB9D47; 
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 2px;
+  }
+  
+  .botonLanding:before {
+    left: 20%;
+    transform: translateY(-50%) rotate(45deg);
 
-color: #363636;
-}
+  }
+  
+  .botonLanding:after {
+    right: 20%;
+    transform: translateY(-50%) rotate(-45deg);
 
+  }
